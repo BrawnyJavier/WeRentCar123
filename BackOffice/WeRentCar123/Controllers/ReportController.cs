@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ReportService;
+using System;
+using System.Linq;
 using System.Threading.Tasks;
+
 namespace WeRentCar123.Controllers
 {
     public class ReportController : Controller
@@ -13,11 +16,24 @@ namespace WeRentCar123.Controllers
         // GET: Report
         public async Task<ActionResult> Index()
         {
-            var res = await _reportService.GetReportAsync();
 
-            return View(res);
+            return View();
         }
 
-      
+
+        public async Task<IActionResult> GetReport(DateTime? Date = null)
+        {
+            var res = await _reportService.GetReportAsync();
+
+            if (Date != null)
+            {
+                var filteredResult = res.Where(d => d.date.Date == Date.Value.Date).ToList();
+
+                return Ok(filteredResult);
+            }
+
+            return Ok(res);
+        }
+
     }
 }

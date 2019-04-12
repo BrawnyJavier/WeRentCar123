@@ -23,6 +23,13 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
+                        <label asp-for="VehicleRentalRegistrationDate" class="control-label"></label>
+                        <input asp-for="VehicleRentalRegistrationDate" class="form-control" type="date" />
+                        <span asp-validation-for="VehicleRentalRegistrationDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
                         <label asp-for="RentFromDate" class="control-label"></label>
                         <input asp-for="RentFromDate" class="form-control" type="date" />
                         <span asp-validation-for="RentFromDate" class="text-danger"></span>

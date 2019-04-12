@@ -73,7 +73,6 @@ namespace WeRentCar123.Controllers
         {
             if (ModelState.IsValid)
             {
-                vehicleRental.VehicleRentalRegistrationDate = DateTime.Now;
                 _context.Add(vehicleRental);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
