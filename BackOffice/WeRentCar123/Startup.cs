@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ReportService;
 
 namespace WeRentCar123
 {
@@ -33,6 +34,8 @@ namespace WeRentCar123
 
             services.AddDbContext<WeRentCar123.Context.WeRentCar123Context>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            services.AddSingleton<IReportService>(new ReportService.ReportService("http://localhost:8080/ReportServiceJava/webresources/entity.dailyreport"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

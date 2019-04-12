@@ -15,6 +15,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\ReportService\ReportService.csproj" />
     <ProjectReference Include="..\WeRentCar123.Context\WeRentCar123.Context.csproj" />
     <ProjectReference Include="..\WeRentCar123.Models\WeRentCar123.Models.csproj" />
   </ItemGroup>
