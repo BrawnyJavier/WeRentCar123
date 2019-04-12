@@ -1,0 +1,75 @@
+﻿@model IEnumerable<WeRentCar123.Models.VehicleBrand>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Vehicle Brands List</h1>
+        </div>
+        <div class="pull-right col-md-6">
+            <a class="btn " asp-action="Create">Create new Brand</a>
+        </div>
+    </div>
+
+
+
+
+<div class="row">
+
+
+    @foreach (var item in Model)
+    {
+        <div class="card card-1">
+            <h4>   @Html.DisplayFor(modelItem => item.VehicleBrandName)</h4>
+            @Html.DisplayFor(modelItem => item.VehicleBrandDescription)
+            @Html.DisplayFor(modelItem => item.VehicleBrandIntroductionDate)
+            <div>
+                <a asp-action="Edit" asp-route-id="@item.VehicleBrandID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VehicleBrandID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VehicleBrandID">Delete</a>
+            </div>
+        </div>
+    }
+
+</div>
+
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleBrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleBrandDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleBrandIntroductionDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleBrandName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleBrandDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VehicleBrandIntroductionDate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.VehicleBrandID">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.VehicleBrandID">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.VehicleBrandID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>*@

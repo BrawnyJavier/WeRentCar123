@@ -1,0 +1,91 @@
+﻿@model IEnumerable<WeRentCar123.Models.VehicleModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Vehicle Models List</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@*<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+        <tr>
+            <th class="mdl-data-table__cell--non-numeric">Material</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+            <td>25</td>
+            <td>$2.90</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+            <td>50</td>
+            <td>$1.25</td>
+        </tr>
+        <tr>
+            <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+            <td>10</td>
+            <td>$2.35</td>
+        </tr>
+    </tbody>
+</table>*@
+<div class="row">
+    <div class="col-md-12">
+        <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.VehicleModelName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.VehicleModelDescription)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.VehicleBrand)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.VehicleModelYear)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.RecommendedRentalDailyPrice)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VehicleModelName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VehicleModelDescription)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VehicleBrand.VehicleBrandID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VehicleModelYear)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.RecommendedRentalDailyPrice)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.VehicleModelID">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.VehicleModelID">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.VehicleModelID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

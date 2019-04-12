@@ -1,0 +1,69 @@
+﻿@model WeRentCar123.Models.Vehicle
+
+@{
+    ViewData["Title"] = "Create";
+    var vehicleModels = ViewBag.VehicleModels as List<VehicleModel>
+    ;
+    }
+
+    <h1>Register a new vehicle</h1>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label  class="control-label">Brand</label>
+                    <select  onchange="LoadModels(this.value)"
+                            class="form-control" asp-items="ViewBag.VehicleBrands">
+                        <option disabled selected hidden>-Select-</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VehicleModelID" class="control-label"></label>
+                    <select asp-for="VehicleModelID" class="form-control" id="Model"></select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="VehicleNotes" class="control-label"></label>
+                    <textarea asp-for="VehicleNotes" class="form-control" ></textarea>
+                    <span asp-validation-for="VehicleNotes" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Color" class="control-label"></label>
+                    <input asp-for="Color" class="form-control" />
+                    <span asp-validation-for="Color" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+    <script type="text/javascript">
+
+        function LoadModels(brandID) {
+            const select = $('#Model');
+
+            $.getJSON('/vehiclemodels/getbybrandid?brandid=' + brandID, (r) => {
+                console.warn(r)
+                // clears the select.
+                select.find('option').remove().end();
+
+                r.forEach(v => {
+                    select.append($('<option>', {
+                        value: v.vehicleModelID,
+                        text: v.vehicleModelName + ' ' + v.vehicleModelYear
+                    }));
+                });
+
+            })
+        }
+    </script>
+    @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

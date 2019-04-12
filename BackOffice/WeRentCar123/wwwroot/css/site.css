@@ -1,0 +1,180 @@
+﻿
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+.btn {
+    position: relative;
+    padding: 5px;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    transition: background-color .3s;
+}
+
+    .btn:hover, .btn:focus {
+        background-color: #27ae60;
+    }
+
+    .btn > * {
+        position: relative;
+    }
+
+    .btn span {
+        display: block;
+        padding: 12px 24px;
+    }
+
+    .btn:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 0;
+        padding-top: 0;
+        border-radius: 100%;
+        background-color: rgba(236, 240, 241, .3);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .btn:active:before {
+        width: 120%;
+        padding-top: 120%;
+        transition: width .2s ease-out, padding-top .2s ease-out;
+    }
+
+/* Styles, not important */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+.btn.orange {
+    background-color: #e67e22;
+}
+
+    .btn.orange:hover, .btn.orange:focus {
+        background-color: #d35400;
+    }
+
+.btn.red {
+    background-color: #e74c3c;
+}
+
+    .btn.red:hover, .btn.red:focus {
+        background-color: #c0392b;
+    }
+.dash_icon {
+    max-height: 150px;
+    width: auto
+}
+.card {
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 300px;
+    margin: 1rem;
+    position: relative;
+    width: 300px;
+}
+
+.card-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer; padding: 11px;
+}
+
+    .card-1:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+.card-2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
