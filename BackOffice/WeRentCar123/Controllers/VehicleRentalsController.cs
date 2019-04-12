@@ -22,7 +22,8 @@ namespace WeRentCar123.Controllers
         // GET: VehicleRentals
         public async Task<IActionResult> Index()
         {
-            return View(await _context.VehicleRentals.ToListAsync());
+            var weRentCar123Context = _context.VehicleRentals.Include(v => v.Vehicle).Include(v=>v.Vehicle.VehicleModel).Include(v => v.VehicleRentalClient);
+            return View(await weRentCar123Context.ToListAsync());
         }
 
         // GET: VehicleRentals/Details/5
@@ -34,6 +35,8 @@ namespace WeRentCar123.Controllers
             }
 
             var vehicleRental = await _context.VehicleRentals
+                .Include(v => v.Vehicle)
+                .Include(v => v.VehicleRentalClient)
                 .FirstOrDefaultAsync(m => m.VehicleRentalID == id);
             if (vehicleRental == null)
             {
@@ -46,6 +49,18 @@ namespace WeRentCar123.Controllers
         // GET: VehicleRentals/Create
         public IActionResult Create()
         {
+            ViewData["VehicleID"] = new SelectList(_context.Vehicles.Select(v => new
+            {
+                v.VehicleID,
+                FullName = $"{v.VehicleModel.VehicleModelName} {v.VehicleModel.VehicleModelYear} {v.Color} ({v.VehicleID})"
+            }), "VehicleID", "FullName");
+
+            ViewData["VehicleRentalClientId"] = new SelectList(_context.VehicleRentalClients.Select(c => new
+            {
+                c.VehicleRentalClientId,
+                FullName = $"{c.Name} {c.LastName} ({c.ID})"
+
+            }), "VehicleRentalClientId", "FullName");
             return View();
         }
 
@@ -54,14 +69,17 @@ namespace WeRentCar123.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VehicleRentalID,VehicleRentalRegistrationDate,RentFromDate,RentToDate,DailyRentalPrice,Notes")] VehicleRental vehicleRental)
+        public async Task<IActionResult> Create([Bind("VehicleRentalID,VehicleRentalRegistrationDate,VehicleRentalClientId,VehicleID,RentFromDate,RentToDate,DailyRentalPrice,Notes")] VehicleRental vehicleRental)
         {
             if (ModelState.IsValid)
             {
+                vehicleRental.VehicleRentalRegistrationDate = DateTime.Now;
                 _context.Add(vehicleRental);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["VehicleID"] = new SelectList(_context.Vehicles, "VehicleID", "VehicleID", vehicleRental.VehicleID);
+            ViewData["VehicleRentalClientId"] = new SelectList(_context.VehicleRentalClients, "VehicleRentalClientId", "VehicleRentalClientId", vehicleRental.VehicleRentalClientId);
             return View(vehicleRental);
         }
 
@@ -78,6 +96,8 @@ namespace WeRentCar123.Controllers
             {
                 return NotFound();
             }
+            ViewData["VehicleID"] = new SelectList(_context.Vehicles, "VehicleID", "VehicleID", vehicleRental.VehicleID);
+            ViewData["VehicleRentalClientId"] = new SelectList(_context.VehicleRentalClients, "VehicleRentalClientId", "VehicleRentalClientId", vehicleRental.VehicleRentalClientId);
             return View(vehicleRental);
         }
 
@@ -86,7 +106,7 @@ namespace WeRentCar123.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VehicleRentalID,VehicleRentalRegistrationDate,RentFromDate,RentToDate,DailyRentalPrice,Notes")] VehicleRental vehicleRental)
+        public async Task<IActionResult> Edit(int id, [Bind("VehicleRentalID,VehicleRentalRegistrationDate,VehicleRentalClientId,VehicleID,RentFromDate,RentToDate,DailyRentalPrice,Notes")] VehicleRental vehicleRental)
         {
             if (id != vehicleRental.VehicleRentalID)
             {
@@ -113,6 +133,8 @@ namespace WeRentCar123.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["VehicleID"] = new SelectList(_context.Vehicles, "VehicleID", "VehicleID", vehicleRental.VehicleID);
+            ViewData["VehicleRentalClientId"] = new SelectList(_context.VehicleRentalClients, "VehicleRentalClientId", "VehicleRentalClientId", vehicleRental.VehicleRentalClientId);
             return View(vehicleRental);
         }
 
@@ -125,6 +147,8 @@ namespace WeRentCar123.Controllers
             }
 
             var vehicleRental = await _context.VehicleRentals
+                .Include(v => v.Vehicle)
+                .Include(v => v.VehicleRentalClient)
                 .FirstOrDefaultAsync(m => m.VehicleRentalID == id);
             if (vehicleRental == null)
             {

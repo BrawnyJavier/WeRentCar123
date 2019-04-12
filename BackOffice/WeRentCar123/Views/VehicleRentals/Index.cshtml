@@ -4,16 +4,22 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>List of Rentals</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Register a new rental</a>
 </p>
-<table class="table">
+<table style="width: 100%;" class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
     <thead>
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.VehicleRentalRegistrationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VehicleRentalClient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehicle)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.RentFromDate)
@@ -35,6 +41,12 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.VehicleRentalRegistrationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VehicleRentalClient.Name)
+            </td>
+            <td>
+              <span>@((item.Vehicle.VehicleModel.VehicleModelName +" "+ item.Vehicle.VehicleModel.VehicleModelYear + $" (Cod: {item.VehicleID})"))</span>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.RentFromDate)

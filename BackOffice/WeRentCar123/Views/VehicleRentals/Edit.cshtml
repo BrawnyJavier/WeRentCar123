@@ -19,6 +19,16 @@
                 <span asp-validation-for="VehicleRentalRegistrationDate" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="VehicleRentalClientId" class="control-label"></label>
+                <select asp-for="VehicleRentalClientId" class="form-control" asp-items="ViewBag.VehicleRentalClientId"></select>
+                <span asp-validation-for="VehicleRentalClientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VehicleID" class="control-label"></label>
+                <select asp-for="VehicleID" class="form-control" asp-items="ViewBag.VehicleID"></select>
+                <span asp-validation-for="VehicleID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="RentFromDate" class="control-label"></label>
                 <input asp-for="RentFromDate" class="form-control" />
                 <span asp-validation-for="RentFromDate" class="text-danger"></span>
