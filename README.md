@@ -24,16 +24,17 @@ SQL Server
 
 A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
+### Creating the database 
 
 ```
 ### First, you will need to generate the database.
 To do so, open the .sln file contained in   the .\WeRentCar123\BackOffice\WeRentCar123.sln  
 using visual studio then, go to Tools> Nuget Package Mannager >  Package mannager console  
-in the console, select the WeRentCar123.Context as the default project
+in the console, select the WeRentCar123.Context as the default project and type "update-database", after  
+you hit enter, the database will be created in the configured sql server instance.
 ```
 
-And repeat
+### Connecting the ReportServer
 
 ```
 until finished
@@ -41,21 +42,6 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
 
 ```
 Give an example
