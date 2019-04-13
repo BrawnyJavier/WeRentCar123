@@ -27,7 +27,9 @@ A step by step series of examples that tell you how to get a development env run
 Say what the step will be
 
 ```
-### First, you will need to generate the database. To do so, open the .sln file contained in the .\WeRentCar123\BackOffice\WeRentCar123.sln using visual studio.
+### First, you will need to generate the database.
+To do so, open the .sln file contained in <br /> the .\WeRentCar123\BackOffice\WeRentCar123.sln 
+<br /> using visual studio.
 Then, go to Tools>
 ```
 
