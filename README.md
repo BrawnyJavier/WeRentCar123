@@ -40,7 +40,13 @@ you hit enter, the database will be created in the configured sql server instanc
 ```
 Open the RESTful Java project contained.\WeRentCar123\JavaReportService  
 in  using netbeans, you will need to configure  
-the database connection, to do so open the persistance.xml file under "Configuration files" folder.
+the database connection, to do so open the persistance.xml file under "Configuration files" folder, change the user and password  
+to match your database's user login.  
+Second, go to web/web-inf/glassfish-resources and change the parameeters to match  
+youur database instance connection.
+
+Run the project.
+  
 
 ```
 
