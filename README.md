@@ -7,10 +7,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+You will need the have the following technologies installed in your machine to be able to run this project:
 
 ```
-Give examples
+Visual Studio 2017 or greater
+```
+```
+NetBeans
+```
+```
+SQL Server
 ```
 
 ### Installing
