@@ -74,7 +74,7 @@ Html:
 
 
 ### Screenshots
-![home](App Screenshots/Home.JPG)
+![home](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Home.JPG)
 
 
 ```
