@@ -19,6 +19,21 @@ NetBeans
 SQL Server
 ```
 
+### Architecture
+**Database structure**  
+![home](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Database.JPG)
+
+**Base app architecture**  
+![Base app architecture](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Base%20app%20architecture.JPG)  
+
+* Report Service : contains the classes and interfaces to connect to the Java service.
+* WeRentCar123: is the web project that serves the app.
+* WeRentCar123.Context: contains the entityframework's db context.
+* WeRentCar123.Models: contains the domain classes.
+
+**ReportServiceJava**
+This is a java's RESTful web service that connects to the database and queries a VIEW containing the report's data.
+![ReportServiceJava](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Report%20Service.JPG)
 ### Installing
 
 
@@ -74,8 +89,12 @@ Html:
 
 
 ### Screenshots
+*Dashboard*  
 ![home](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Home.JPG)
 
+
+*List of Rentals*  
+![List of Rentals](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Rentals%20List.JPG)
 
 ```
 Give an example
