@@ -29,7 +29,10 @@ A step by step series of examples that tell you how to get a development env run
 ```
 First, you will need to generate the database.
 To do so, open the .sln file contained in    .\WeRentCar123\BackOffice\WeRentCar123.sln  
+go to WeRentCar123.Context and modify the connection string to match your sql server instance.
+
 using visual studio then, go to  
+
 Tools> Nuget Package Mannager >  Package mannager console    
 in the console, select the WeRentCar123.Context as the default project and type "update-database", after  
 you hit enter, the database will be created in the configured sql server instance.
