@@ -29,7 +29,8 @@ Say what the step will be
 ```
 ### First, you will need to generate the database.
 To do so, open the .sln file contained in   the .\WeRentCar123\BackOffice\WeRentCar123.sln  
-using visual studio then, go to Tools>
+using visual studio then, go to Tools> Nuget Package Mannager >  Package mannager console  
+in the console, select the WeRentCar123.Context as the default project
 ```
 
 And repeat
