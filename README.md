@@ -1,5 +1,5 @@
 # WeRentCar123
- *The company WeRentCar123 is looking for a developer to help them build a webpage.In this first version they want to be able to create clients, register vehicles and assign a client to a vehicle.*
+ *The company WeRentCar123 is looking for a developer to help them build a webpage.In this first version they want to be able to create clients, register vehicles and assign a client to a vehicle.*  
  This project is to demonstrate how to connect a Asp.Net project to a Java RESTfull web service through http requests.
 
 ## Getting Started
