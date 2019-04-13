@@ -113,11 +113,7 @@ Html:
 
 * **Brawny Javier Mateo Reyes** - *Initial work* https://github.com/BrawnyJavier
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+See also the list of [contributors](https://github.com/BrawnyJavier/WeRentCar123/graphs/contributors) who participated in this project.
 
 ## Acknowledgments
 This project is for demonstration purposes.
