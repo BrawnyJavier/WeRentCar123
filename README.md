@@ -52,6 +52,26 @@ Run the project.
   
 
 ```
+### Report filter table plugin
+The plugin source file is located at .\WeRentCar123\BackOffice\WeRentCar123\wwwroot\js\WeRentCar123TableFilter.js.  
+Usage:  
+```
+Html: 
+<div id="SalesReportTable"></div>
+```
+
+```
+/// Creates the filtered table
+  const TABLE_WITH_FILTER = $('#SalesReportTable').WeRentCar123TableFilter({
+            url: '/Report/GetReport'
+        });
+        
+/// Fetches the report, this method also accepts a date parameter,  
+// to filter the records.
+   TABLE_WITH_FILTER.Fetch();   
+```
+
+
 
 End with an example of getting some data out of the system or using it for a little demo
 
