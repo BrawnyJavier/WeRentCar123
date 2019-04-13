@@ -27,9 +27,10 @@ A step by step series of examples that tell you how to get a development env run
 ### Creating the database 
 
 ```
-### First, you will need to generate the database.
-To do so, open the .sln file contained in   the .\WeRentCar123\BackOffice\WeRentCar123.sln  
-using visual studio then, go to Tools> Nuget Package Mannager >  Package mannager console  
+First, you will need to generate the database.
+To do so, open the .sln file contained in    .\WeRentCar123\BackOffice\WeRentCar123.sln  
+using visual studio then, go to  
+Tools> Nuget Package Mannager >  Package mannager console    
 in the console, select the WeRentCar123.Context as the default project and type "update-database", after  
 you hit enter, the database will be created in the configured sql server instance.
 ```
@@ -37,7 +38,10 @@ you hit enter, the database will be created in the configured sql server instanc
 ### Connecting the ReportServer
 
 ```
-until finished
+Open the RESTful Java project contained in  using netbeans  
+.\WeRentCar123\JavaReportService, you will need to configure   
+the database connection, to do so open the persistance.xml file under "Configuration files" folder.
+
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
