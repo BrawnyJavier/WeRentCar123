@@ -37,7 +37,9 @@ This is a java's RESTful web service that connects to the database and queries a
 ### Installing
 
 
-A step by step series of examples that tell you how to get a development env running
+A step by step series of examples that tell you how to get a development env running.
+This project uses EntityFrameworkCore Code First approach, so the database is generated from code.  
+To generate the database in your local SQL Server instance, follow these instructions:  
 
 ### Creating the database 
 
@@ -99,15 +101,13 @@ Html:
 *Report Page*
 ![Report Page](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Report%20Page.JPG)
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
 * [Asp. Net Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-2.2) - The web framework used
 * [RESTful web services](https://docs.oracle.com/cd/E24329_01/web.1211/e24983/overview.htm) - Report service
 * [JQuery](https://jquery.com/) - Front-end scripting
+* [Entity Framework Core](https://docs.microsoft.com/en-us/ef/core/) - ORM
 
 ## Authors
 
