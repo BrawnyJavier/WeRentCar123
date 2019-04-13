@@ -89,8 +89,12 @@ Html:
 
 
 ### Screenshots
+*Dashboard*  
 ![home](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Home.JPG)
 
+
+*List of Rentals*  
+![List of Rentals](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Rentals%20List.JPG)
 
 ```
 Give an example
