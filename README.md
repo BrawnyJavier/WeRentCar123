@@ -38,8 +38,8 @@ you hit enter, the database will be created in the configured sql server instanc
 ### Connecting the ReportServer
 
 ```
-Open the RESTful Java project contained in  using netbeans  
-.\WeRentCar123\JavaReportService, you will need to configure   
+Open the RESTful Java project contained.\WeRentCar123\JavaReportService  
+in  using netbeans, you will need to configure  
 the database connection, to do so open the persistance.xml file under "Configuration files" folder.
 
 ```
