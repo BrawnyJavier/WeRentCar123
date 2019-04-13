@@ -96,9 +96,8 @@ Html:
 *List of Rentals*  
 ![List of Rentals](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Rentals%20List.JPG)
 
-```
-Give an example
-```
+*Report Page*
+![Report Page](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Report%20Page.JPG)
 
 ## Deployment
 
