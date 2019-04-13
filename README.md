@@ -1,5 +1,6 @@
 # WeRentCar123
- The company WeRentCar123 is looking for a developer to help them build a webpage.In this first version they want to be able to create clients, register vehicles and assign a client to a vehicle.
+ *The company WeRentCar123 is looking for a developer to help them build a webpage.In this first version they want to be able to create clients, register vehicles and assign a client to a vehicle.*
+ This project is to demonstrate how to connect a Asp.Net project to a Java RESTfull web service through http requests.
 
 ## Getting Started
 
@@ -60,12 +61,13 @@ you hit enter, the database will be created in the configured sql server instanc
 ```
 Open the RESTful Java project contained.\WeRentCar123\JavaReportService  
 in  using netbeans, you will need to configure  
-the database connection, to do so open the persistance.xml file under "Configuration files" folder, change the user and password  
+the database connection, to do so open the persistance.xml file under  
+"Configuration files" folder, change the user and password  
 to match your database's user login.  
 Second, go to web/web-inf/glassfish-resources and change the parameeters to match  
 youur database instance connection.
 
-Run the project.
+Run the project
   
 
 ```
