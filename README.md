@@ -23,7 +23,7 @@ SQL Server
 *Database structure*  
 ![home](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Database.JPG)
 
-*Base app architecture*
+*Base app architecture*  
 ![Base app architecture](https://raw.githubusercontent.com/BrawnyJavier/WeRentCar123/master/App%20Screenshots/Base%20app%20architecture.JPG)  
 
 * Report Service : contains the classes and interfaces to connect to the Java service.
