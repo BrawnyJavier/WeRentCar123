@@ -29,8 +29,7 @@ Say what the step will be
 ```
 ### First, you will need to generate the database.
 To do so, open the .sln file contained in   the .\WeRentCar123\BackOffice\WeRentCar123.sln  
-<br /> using visual studio.
-Then, go to Tools>
+using visual studio then, go to Tools>
 ```
 
 And repeat
