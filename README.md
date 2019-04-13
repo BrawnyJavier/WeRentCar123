@@ -21,12 +21,14 @@ SQL Server
 
 ### Installing
 
+
 A step by step series of examples that tell you how to get a development env running
 
 Say what the step will be
 
 ```
-Give the example
+### First, you will need to generate the database. To do so, open the .sln file contained in the .\WeRentCar123\BackOffice\WeRentCar123.sln using visual studio.
+Then, go to Tools>
 ```
 
 And repeat
